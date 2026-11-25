@@ -1,0 +1,32 @@
+{
+  "name": "top-weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sebvu/top-weather-app#readme",
+  "bugs": {
+    "url": "https://github.com/sebvu/top-weather-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebvu/top-weather-app.git"
+  },
+  "license": "ISC",
+  "author": "jester",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "predeploy": "git checkout -B gh-pages && git merge main --no-edit && npm run build",
+    "deploy": "git add dist -f && git commit -m 'deployment commit' && git subtree push --prefix dist origin gh-pages"
+  },
+  "devDependencies": {
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.8",
+    "webpack": "^5.113.0",
+    "webpack-cli": "^7.3.1",
+    "webpack-dev-server": "^6.1.0",
+    "webpack-merge": "^6.0.1"
+  }
+}

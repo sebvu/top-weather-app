@@ -10,7 +10,7 @@ const handleError = (fn) => {
         );
       } else if (err instanceof SyntaxError) {
         // big assumption.. more than likely a query syntax error
-        console.log("Bad query request.");
+        console.log("Bad query request: " + err);
       } else {
         throw err;
       }

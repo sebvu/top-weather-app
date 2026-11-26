@@ -37,6 +37,6 @@ export default new (class VisualCrossingService {
   }
 
   setUnitImperial() {
-    this.#unit = "imperial";
+    this.#unit = "us";
   }
 })();

@@ -7,7 +7,11 @@ export default new (class VisualCrossingService {
   // methods
 
   #getWeatherAPILink(searchQuery) {
-    return this.#API_LINK + searchQuery + `?unitGroup=${this.#unit}`;
+    return (
+      this.#API_LINK +
+      searchQuery +
+      `?unitGroup=${this.#unit}&include=days,hours,current`
+    );
   }
 
   async requestWeatherInformation(rawSearchQuery) {
